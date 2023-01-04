@@ -9,6 +9,7 @@ before_action :authenticate_user!
   def index
     @books = Book.all
     @book = Book.new
+    @book_favorite = Book.find(params[:id])
   end
 
   def create
